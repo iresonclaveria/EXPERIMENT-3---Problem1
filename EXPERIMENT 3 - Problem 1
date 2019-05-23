@@ -1,0 +1,48 @@
+#include <iomanip>
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+const int number=10;
+int main ()
+{
+	int Numbers, SmallestNumber, LargestNumber, Sum, integers[10];
+	float Average;
+	cout<<"Enter 10 Numbers:"<< endl;
+	
+	for (Numbers = 0; Numbers < 10; Numbers++)
+	integers[Numbers] = 0;
+	
+	for (Numbers = 0; Numbers < 10; Numbers++)
+	cin >> integers[Numbers];
+	
+	
+	LargestNumber = integers[0];
+	for (Numbers = 0; Numbers < 10; Numbers++)
+	{
+		if (LargestNumber < integers[Numbers])
+		LargestNumber = integers[Numbers];
+	}
+	
+	SmallestNumber = integers[0];
+	
+	for (Numbers = 0; Numbers < 10; Numbers++)
+	{
+		if ( SmallestNumber > integers[Numbers])
+		SmallestNumber = integers[Numbers];
+	} 
+	
+	Sum = 0;
+	for (Numbers = 0; Numbers < 10; Numbers++)
+	
+	Sum = Sum + integers[Numbers];
+	Average = float (Sum)/float (number);
+	
+	cout << "\nThe Smallest Integer is: " << SmallestNumber << endl;
+	cout << "The Largest Integer is: " << LargestNumber << endl;
+	cout << "The Sum is: " << Sum << endl;
+	cout<<"The Average is: "<<fixed<<setprecision(2)<<Average;
+
+_getch();
+return 0;
+}
